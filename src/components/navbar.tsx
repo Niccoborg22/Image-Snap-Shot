@@ -1,6 +1,9 @@
 import React, { ReactNode } from "react";
-import SearchBar from "./searchBar";
+import SearchBar from "./componentsNavBar/searchBar";
+import "../App.css";
 
+
+// Inputs needed for the navigation bar
 interface Props {
   barName: string;
   appPicture: string;
@@ -8,8 +11,9 @@ interface Props {
   barLink: string[];
 }
 
+// function NavBar for the navigation bar
 function NavBar({ barName, appPicture, barPages, barLink }: Props) {
-  // function to get the name and link
+  // function to create a new entry in the navigation bar
   const getBarElement = (name: string, link: string) => {
     return (
       <li key={name} className="nav-item">
@@ -74,4 +78,5 @@ function NavBar({ barName, appPicture, barPages, barLink }: Props) {
   );
 }
 
+// Export the component
 export default NavBar;

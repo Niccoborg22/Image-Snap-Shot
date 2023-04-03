@@ -1,0 +1,30 @@
+body {
+  background-color:black;
+  opacity: 0.9;
+}
+
+.className {
+    display: inline-block;
+}
+
+.Copyright {
+    display: inline-block;
+}
+
+footer {
+  border-top: 1px solid #ccc;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Links a {
+  margin-right: 10px;
+}
+
+.mainTitle {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
