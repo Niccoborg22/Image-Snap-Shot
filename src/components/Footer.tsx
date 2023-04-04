@@ -18,8 +18,8 @@ function Footer({ companyName, footerPages, footerLink }: Props) {
       </a>
     );
   };
-  
 
+  // Return the footer HTML
   return (
     <footer className="bg-dark">
       <div className="Copyright">

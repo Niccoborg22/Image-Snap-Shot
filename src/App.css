@@ -28,3 +28,10 @@ footer {
   font-weight: bold;
 }
 
+.card {
+  width: 18rem;
+}
+
+.classContainer {
+  margin-top: 4%;
+}
