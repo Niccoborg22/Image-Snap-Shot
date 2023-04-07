@@ -1,15 +1,14 @@
 import TitleDesc from "./components/componentsBody/Title";
 import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
-import "./App.css"
-
+import "./App.css";
 
 function App() {
   let items = ["New York", "Miami", "Milano", "Rome", "Ciao"];
   const handleSelectItem = (item: string) => {
     console.log(item);
-  }
-  
+  };
+
   return (
     <div>
       <NavBar
@@ -18,13 +17,15 @@ function App() {
         barPages={items}
         barLink={items}
       />
-      <body>
+
+      <div className="bg-dark">
         <TitleDesc
           appTitle="Hello"
           appDescription="Hello to the Hellosians"
           firstPage="yes"
         />
-      </body>
+      </div>
+
       <Footer companyName="Milan" footerPages={items} footerLink={items} />
     </div>
   );

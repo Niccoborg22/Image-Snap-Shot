@@ -1,8 +1,3 @@
-body {
-  background-color:black;
-  opacity: 0.9;
-}
-
 .className {
     display: inline-block;
 }
@@ -34,4 +29,8 @@ footer {
 
 .classContainer {
   margin-top: 4%;
+}
+
+#navigationBar {
+  border-bottom: 1px solid #ccc;
 }

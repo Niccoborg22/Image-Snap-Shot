@@ -18,7 +18,7 @@ function TitleDesc({ appTitle, appDescription, firstPage }: Props) {
     "https://www.itagnol.com/wp-content/uploads/2019/01/CIAO.jpg",
   ];
 
-  if (firstPage === "no") {
+  if (firstPage === "yes") {
     return (
       <>
         <div

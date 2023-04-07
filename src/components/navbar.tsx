@@ -36,7 +36,7 @@ function NavBar({ barName, appPicture, barPages, barLink }: Props) {
 
   // Return HTML that creates a navigation bar
   return (
-    <nav className="navbar navbar-expand-lg bg-dark">
+    <nav className="navbar navbar-expand-lg bg-dark" id="navigationBar">
       <div className="container-fluid">
         <nav className="navbar bg-dark">
           <div className="container">
