@@ -22,3 +22,17 @@ async function nasaPicture() {
   console.log(data);
   return data;
 }
+
+async function getNasaPicture() {
+  const data = await nasaPicture();
+  const url = data["url"];
+  const imgHTML = document.getElementById("nasaPicture");
+  imgHTML.src = url;
+}
+
+async function getNasaTitle() {
+  const data = await nasaPicture();
+  const title = data["title"];
+  const titleHTML = document.getElementById("titlePicture");
+  titleHTML.textContent = title;
+}
