@@ -1,6 +1,6 @@
 import "../../App.css";
-import FirstPage from "./componentsTitle/firstPageOptions";
-import ImageShow from "./componentsTitle/imagesShow";
+import FirstPage from "./componentsBody/firstPageOptions";
+import ImageRow from "./componentsBody/imagesRow";
 
 
 // Inputs needed for the navigation bar
@@ -11,11 +11,17 @@ interface Props {
   firstPage: string;
 }
 
-function TitleDesc({ appTitle, appDescription, firstPage }: Props) {
-  let items = ["Ciao", "Miao"];
+function Body({ appTitle, appDescription, firstPage }: Props) {
+  let items = ["Space", "Cars", "Mountains"];
+  let itemsDesc = [
+    "Space images brought to you by the XXX API!",
+    "Cars images brought to you by the XXX API!",
+    "Mountains images brought to you by the XXX API!",
+  ];
   let itemsLink = [
-    "https://upload.wikimedia.org/wikipedia/it/thumb/4/4e/Ciao_PX.jpg/1200px-Ciao_PX.jpg",
-    "https://www.itagnol.com/wp-content/uploads/2019/01/CIAO.jpg",
+    "https://media.istockphoto.com/photos/background-of-galaxy-and-stars-picture-id1035676256?b=1&k=20&m=1035676256&s=612x612&w=0&h=5vGVNVdkpw46y08cWz9oQcVBHWsvNDkfFUYjDruKHu0=",
+    "https://hips.hearstapps.com/hmg-prod/images/2023-mclaren-artura-101-1655218102.jpg?crop=1.00xw:0.847xh;0,0.153xh&resize=1200:*",
+    "https://cdn.hswstatic.com/gif/highest-mountains-2.jpg",
   ];
 
   if (firstPage === "yes") {
@@ -27,12 +33,12 @@ function TitleDesc({ appTitle, appDescription, firstPage }: Props) {
         >
           <div className="text-light">
             <h1 className="MainTitle">{appTitle}</h1>
-            <h4 className="mt-3">{appDescription}</h4>
+            <h5 className="mt-3">{appDescription}</h5>
           </div>
           <div className="classContainer">
             <FirstPage
               imagesTitle={items}
-              imagesDescription={items}
+              imagesDescription={itemsDesc}
               imagesLink={itemsLink}
               imagesPageLink={items}
             />
@@ -48,9 +54,8 @@ function TitleDesc({ appTitle, appDescription, firstPage }: Props) {
         style={{ height: "100vh", width: "100%" }}
       >
         <h1 className="MainTitle">{appTitle}</h1>
-        <h4 className="mt-3">{appDescription}</h4>
-        <ImageShow
-          imagesTitle={items}
+        <h5 className="mt-3">{appDescription}</h5>
+        <ImageRow
           imagesDescription={items}
           imagesLink={itemsLink}
         />
@@ -59,4 +64,4 @@ function TitleDesc({ appTitle, appDescription, firstPage }: Props) {
   );
 }
 
-export default TitleDesc;
+export default Body;

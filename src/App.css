@@ -28,9 +28,24 @@ footer {
 }
 
 .classContainer {
-  margin-top: 4%;
+  margin-top: 3%;
 }
 
 #navigationBar {
   border-bottom: 1px solid #ccc;
+}
+
+#cardImage {
+  width: 18rem;
+}
+
+.card-grid {
+  margin-top: 4%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
