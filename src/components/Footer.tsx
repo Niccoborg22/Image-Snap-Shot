@@ -24,7 +24,7 @@ function Footer({ companyName, footerPages, footerLink }: Props) {
     <footer className="bg-dark">
       <div className="Copyright">
         <p className="nav-link active text-light">
-          Copyright © 2023 {companyName}
+          Copyright {companyName} © 2023
         </p>
       </div>
       <div className="Links">

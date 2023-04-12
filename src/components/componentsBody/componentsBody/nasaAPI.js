@@ -10,8 +10,10 @@ const baseUrl = "https://api.nasa.gov/planetary/apod";
 const apiKey = "DEMO_KEY";
 
 // Define the parameters you want to include in the API request
-const date = "2023-04-10"; // replace with your desired date
-const thumbs = true; // replace with your desired value
+let dateCreate = new Date();
+dateCreate.setDate(dateCreate.getDate() - 8);
+let date = dateCreate.toISOString().slice(0, 10);
+const thumbs = true;
 
 // Add the parameters to the URL string
 const url = `${baseUrl}?api_key=${apiKey}&start_date=${date}&thumbs=${thumbs}`;
@@ -23,16 +25,30 @@ async function nasaPicture() {
   return data;
 }
 
-async function getNasaPicture() {
+async function getNasaPictureLoop() {
+  let urls = [];
   const data = await nasaPicture();
-  const url = data["url"];
-  const imgHTML = document.getElementById("nasaPicture");
-  imgHTML.src = url;
+  for (var i = 0; i < data.length; i++) {
+    for (var key in data[i]) {
+      if (key == "url") {
+        let url = data[i][key];
+        urls.push(url)
+      }
+    }
+  }
+  return urls;
 }
 
-async function getNasaTitle() {
+async function getNasaTitleLoop() {
+  let titles = [];
   const data = await nasaPicture();
-  const title = data["title"];
-  const titleHTML = document.getElementById("titlePicture");
-  titleHTML.textContent = title;
+  for (var i = 0; i < data.length; i++) {
+    for (var key in data[i]) {
+      if (key == "title") {
+        let title = data[i][key];
+        titles.push(title);
+      }
+    }
+  }
+  return titles;
 }
