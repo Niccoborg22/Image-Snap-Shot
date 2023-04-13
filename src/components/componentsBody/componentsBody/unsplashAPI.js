@@ -18,7 +18,7 @@ const cars_QUERY = 'cars';
 
 const perPage_QUERY = '9';
 
-const url = `${baseUrl}?query=${cars_QUERY}&per_page=${perPage_QUERY}&client_id=${unsplash_KEY}`;
+const url = `${base_URL}?query=${cars_QUERY}&per_page=${perPage_QUERY}&client_id=${unsplash_KEY}`;
 
 // Function to save the raw Unsplash JSON data
 async function unsplashPicture() {
