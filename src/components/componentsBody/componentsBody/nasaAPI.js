@@ -21,11 +21,10 @@ const url = `${baseUrl}?api_key=${apiKey}&start_date=${date}&thumbs=${thumbs}`;
 async function nasaPicture() {
   const response = await fetch(url, requestOptions);
   const data = await response.json();
-  console.log(data);
   return data;
 }
 
-async function getNasaPictureLoop() {
+async function getNasaPictures() {
   let urls = [];
   const data = await nasaPicture();
   for (var i = 0; i < data.length; i++) {
