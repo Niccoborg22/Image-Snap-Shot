@@ -1,2 +1,2 @@
 # Image-Snap-Shot
-React Snap-Shot
+Typescript & JavaScript React Application 
