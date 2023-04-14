@@ -38,7 +38,7 @@ async function getNasaPictures() {
   return urls;
 }
 
-async function getNasaTitleLoop() {
+async function getNasaTitle() {
   let titles = [];
   const data = await nasaPicture();
   for (var i = 0; i < data.length; i++) {
