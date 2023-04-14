@@ -1,6 +1,5 @@
 import "../../../App.css";
-import { nasaPicture, getNasaPicture, getNasaTitle } from './nasaAPI';
-import {unsplashPicture, getUnsplashTitles, getUnsplashPictures} from './unsplashAPI';
+
 
 // Inputs needed for the first page
 interface Props {

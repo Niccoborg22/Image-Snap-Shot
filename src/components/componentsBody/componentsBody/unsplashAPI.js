@@ -18,19 +18,24 @@ const cars_QUERY = 'cars';
 
 const perPage_QUERY = '9';
 
-const url = `${base_URL}?query=${cars_QUERY}&per_page=${perPage_QUERY}&client_id=${unsplash_KEY}`;
 
 // Function to save the raw Unsplash JSON data
-async function unsplashPicture() {
+async function unsplashPicture(query) {
+  if (query == "Cars"){
+    const url = `${base_URL}?query=${cars_QUERY}&per_page=${perPage_QUERY}&client_id=${unsplash_KEY}`;
+  }
+  else{
+    const url = `${base_URL}?query=${mountains_QUERY}&per_page=${perPage_QUERY}&client_id=${unsplash_KEY}`;
+  }
   const response = await fetch(url, requestOptions);
   const data = await response.json();
   return data;
 }
 
 // Function that returns the titles of the images in an array
-async function getUnsplashTitles() {
+async function getUnsplashTitles(query) {
   let titles = [];
-  const data = await unsplashPicture();
+  const data = await unsplashPicture(query);
   for (let i = 0; i < data.results.length; i++) {
     titles.push(data.results[i].alt_description);
   }
@@ -38,9 +43,9 @@ async function getUnsplashTitles() {
 }
 
 // Function that returns the links of the images in an array
-async function getUnsplashPictures() {
+async function getUnsplashPictures(query) {
   let urls = [];
-  const data = await unsplashPicture();
+  const data = await unsplashPicture(query);
   for (let i = 0; i < data.results.length; i++) {
     urls.push(data.results[i].urls.raw);
   }

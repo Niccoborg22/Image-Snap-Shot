@@ -1,6 +1,6 @@
 import "../../App.css";
 import FirstPage from "./componentsBody/firstPageOptions";
-import ImageRow from "./componentsBody/imagesRow";
+import ImageDisplay from "./componentsBody/imageSelection";
 
 
 // Inputs needed for the navigation bar
@@ -9,9 +9,10 @@ interface Props {
   appDescription: string;
   // The variable firstPage should be assigned value "yes" or "no"
   firstPage: string;
+  imagesType: string;
 }
 
-function Body({ appTitle, appDescription, firstPage }: Props) {
+function Body({ appTitle, appDescription, firstPage, imagesType }: Props) {
   let items = ["Space", "Cars", "Mountains"];
   let itemsDesc = [
     "Space images brought to you by the XXX API!",
@@ -55,10 +56,7 @@ function Body({ appTitle, appDescription, firstPage }: Props) {
       >
         <h1 className="MainTitle">{appTitle}</h1>
         <h5 className="mt-3">{appDescription}</h5>
-        <ImageRow
-          imagesDescription={items}
-          imagesLink={itemsLink}
-        />
+        <ImageDisplay imagesType={imagesType} />
       </div>
     </>
   );
