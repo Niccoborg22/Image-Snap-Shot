@@ -40,7 +40,7 @@ function NavBar({ barName, appPicture, barPages, barLink }: Props) {
       <div className="container-fluid">
         <nav className="navbar bg-dark">
           <div className="container">
-            <a className="navbar-brand text-light" href="#">
+            <a className="navbar-brand text-light" href="/#">
               <img
                 src={appPicture}
                 alt="Bootstrap"

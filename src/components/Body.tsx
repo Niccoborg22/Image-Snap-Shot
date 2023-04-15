@@ -19,9 +19,9 @@ async function Body({
 }: Props) {
   let items = ["Space", "Cars", "Mountains"];
   let itemsDesc = [
-    "Space images brought to you by the XXX API!",
-    "Cars images brought to you by the XXX API!",
-    "Mountains images brought to you by the XXX API!",
+    "Space images brought to you by the NASA API!",
+    "Cars images brought to you by the Unsplashed API!",
+    "Mountains images brought to you by the Unsplashed API!",
   ];
   let itemsLink = [
     "https://media.istockphoto.com/photos/background-of-galaxy-and-stars-picture-id1035676256?b=1&k=20&m=1035676256&s=612x612&w=0&h=5vGVNVdkpw46y08cWz9oQcVBHWsvNDkfFUYjDruKHu0=",
