@@ -1,7 +1,6 @@
-import "../../App.css";
-import FirstPage from "./componentsBody/firstPageOptions";
-import ImageDisplay from "./componentsBody/imageSelection";
-
+import "../App.css";
+import FirstPage from "./componentsBody/componentsBody/firstPageOptions";
+import ImageDisplay from "./componentsBody/componentsBody/imageDisplay";
 
 // Inputs needed for the navigation bar
 interface Props {
@@ -12,7 +11,12 @@ interface Props {
   imagesType: string;
 }
 
-function Body({ appTitle, appDescription, firstPage, imagesType }: Props) {
+async function Body({
+  appTitle,
+  appDescription,
+  firstPage,
+  imagesType,
+}: Props) {
   let items = ["Space", "Cars", "Mountains"];
   let itemsDesc = [
     "Space images brought to you by the XXX API!",
@@ -48,7 +52,7 @@ function Body({ appTitle, appDescription, firstPage, imagesType }: Props) {
       </>
     );
   }
-  return (
+  return Promise.resolve(
     <>
       <div
         className="container text-center bg-dark text-light py-5"
@@ -56,7 +60,7 @@ function Body({ appTitle, appDescription, firstPage, imagesType }: Props) {
       >
         <h1 className="MainTitle">{appTitle}</h1>
         <h5 className="mt-3">{appDescription}</h5>
-        <ImageDisplay imagesType={imagesType} />
+        {await ImageDisplay({ imagesType })}
       </div>
     </>
   );

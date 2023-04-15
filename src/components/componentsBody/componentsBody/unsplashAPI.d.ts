@@ -1,4 +1,4 @@
 // Export the API functions written in Javascript 
-export function unsplashPicture(query: string): any;
-export function getUnsplashTitles(query: string): string[];
-export function getUnsplashPictures(query: string): string[];
+
+export async function getUnsplashTitles(query: string): Promise<string[]>;
+export async function getUnsplashPictures(query: string): Promise<string[]>;

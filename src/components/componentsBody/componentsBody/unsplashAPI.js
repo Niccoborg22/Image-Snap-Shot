@@ -1,13 +1,10 @@
-const dotenv = require('dotenv');
-dotenv.config();
-
 const requestOptions = {
   method: "GET",
   headers: {},
 };
 
 // Key to access the unsplash API
-const unsplash_KEY = process.env.unsplash_KEY;
+const unsplash_KEY = "xxx";
 
 // Base URL to request data from the unsplash API
 const base_URL = "https://api.unsplash.com/search/photos";
@@ -33,7 +30,7 @@ async function unsplashPicture(query) {
 }
 
 // Function that returns the titles of the images in an array
-async function getUnsplashTitles(query) {
+export async function getUnsplashTitles(query) {
   let titles = [];
   const data = await unsplashPicture(query);
   for (let i = 0; i < data.results.length; i++) {
@@ -43,7 +40,7 @@ async function getUnsplashTitles(query) {
 }
 
 // Function that returns the links of the images in an array
-async function getUnsplashPictures(query) {
+export async function getUnsplashPictures(query) {
   let urls = [];
   const data = await unsplashPicture(query);
   for (let i = 0; i < data.results.length; i++) {

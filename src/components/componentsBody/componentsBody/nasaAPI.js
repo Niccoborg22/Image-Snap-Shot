@@ -24,7 +24,7 @@ async function nasaPicture() {
   return data;
 }
 
-async function getNasaPictures() {
+export async function getNasaPictures() {
   let urls = [];
   const data = await nasaPicture();
   for (var i = 0; i < data.length; i++) {
@@ -38,7 +38,7 @@ async function getNasaPictures() {
   return urls;
 }
 
-async function getNasaTitle() {
+export async function getNasaTitle() {
   let titles = [];
   const data = await nasaPicture();
   for (var i = 0; i < data.length; i++) {
