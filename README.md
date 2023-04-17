@@ -62,3 +62,34 @@ The architecture of the modules in this application are the following:
     - imagesPageLink: string array with the link of the page descripted
     - imagesDescription: string array with the description of the page that will be rendered if pressed on the button
 - *Dependencies*: /
+
+### ImageDisplay
+- *Description*: This module returns the HTML for a series of cards that explain what the user should expect if decide to press them.
+- *Props*: 
+    - imagesType: string that defines what type of pictures should be displayed
+- *Dependencies*: ImageRow, NasaAPI, UnsplashAPI
+
+### ImageRow
+- *Description*: This module returns the HTML for a series of 3 cards with an image and a short description of it
+- *Props*: 
+    - imagesDescription: string array with the short description of the images in imagesLink
+    - imagesLink: string array with the link of the images that will be displayed
+- *Dependencies*: /
+
+### NasaAPI
+- *Description*: JavaScript file exported with a declaration file exporting 2 functions that are needed to get the short descriptions and links to the images
+- *Props*: /
+- *Dependencies*: /
+
+### UnsplashAPI
+- *Description*: JavaScript file exported with a declaration file exporting 2 functions that are needed to get the short descriptions and links to the images
+- *Props*: /
+- *Dependencies*: /
+
+### Footer
+- *Description*: Returns the HTML for a footer, including a copyright notice and the link to a the pages in the website
+- *Props*:
+    - companyName: string representing the name of the company/person of the website
+    - footerPages: string array representing the name of the pages that you want to display
+    - footerLink: string array representing the links of the pages in footerPages
+- *Dependencies*: /
