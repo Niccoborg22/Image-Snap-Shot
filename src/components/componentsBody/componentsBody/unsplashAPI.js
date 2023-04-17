@@ -15,14 +15,11 @@ const cars_QUERY = 'cars';
 
 const perPage_QUERY = '9';
 
-
 // Function to save the raw Unsplash JSON data
 async function unsplashPicture(query) {
+  let url = `${base_URL}?query=${mountains_QUERY}&per_page=${perPage_QUERY}&client_id=${unsplash_KEY}`;
   if (query == "Cars"){
-    const url = `${base_URL}?query=${cars_QUERY}&per_page=${perPage_QUERY}&client_id=${unsplash_KEY}`;
-  }
-  else{
-    const url = `${base_URL}?query=${mountains_QUERY}&per_page=${perPage_QUERY}&client_id=${unsplash_KEY}`;
+    url = `${base_URL}?query=${cars_QUERY}&per_page=${perPage_QUERY}&client_id=${unsplash_KEY}`;
   }
   const response = await fetch(url, requestOptions);
   const data = await response.json();

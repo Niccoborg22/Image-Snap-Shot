@@ -20,15 +20,34 @@ function ImageRow({ imagesLink, imagesDescription }: Props) {
     );
   };
 
-  // Create an array of cards for each image link and description
-  const cardArray = imagesLink.map((link, index) =>
-    getImageCard(link, imagesDescription[index])
-  );
+  // Split the imagesLink and imagesDescription arrays into groups of three
+  // Split the imagesLink and imagesDescription arrays into groups of three
+  const groups = imagesLink.reduce<string[][]>((resultArray, item, index) => {
+    const chunkIndex = Math.floor(index / 3);
+    if (!resultArray[chunkIndex]) {
+      resultArray[chunkIndex] = [];
+    }
+    resultArray[chunkIndex].push(item);
+    return resultArray;
+  }, []);
+
+  // Create an array of cardArray arrays, where each cardArray has up to three image cards
+  const cardArrays = groups.map((group) => {
+    return group.map((link, index) => {
+      return getImageCard(link, imagesDescription[index]);
+    });
+  });
 
   // Return the HTML for a carousel of images
   return (
     <>
-      <div className="card-grid">{cardArray}</div>
+      {cardArrays.map((cardArray, index) => {
+        return (
+          <div key={index} className="card-grid">
+            {cardArray}
+          </div>
+        );
+      })}
     </>
   );
 }
