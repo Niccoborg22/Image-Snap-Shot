@@ -9,23 +9,27 @@ The endpoints of the website are:
 ### /
 - *Description*: This endpoint will greet the user with a short introduction to the website and offer the user the oppurtunity to choose with group of images he would like to see
 - *Modules*: Navbar (SearchButton), Body (FirstPageOptions), Footer
+![Image snap 1](https://user-images.githubusercontent.com/114749413/232517019-4a920cde-ab9c-4ffa-8ea5-8b2e77aebb55.png)
 
 ### /Space
 - *Description*: This endpoint will show the user 9 Space images from the NASA APOD API together with a title/short description.
 - *Modules*: Navbar (SearchButton), Body (ImagesDisplay, ImageRow, NasaAPI), Footer
+![Image snap Space](https://user-images.githubusercontent.com/114749413/232517049-8b8bbaa5-b4b9-4737-be56-b180b56e6a2b.png)
 
 ### /Cars
 - *Description*: This endpoint will show the user 9 Cars images from the Unsplash API together with a title/short description.
 - *Modules*: Navbar (SearchButton), Body (ImagesDisplay, ImageRow, UnsplashAPI), Footer
+![Image snap Cars](https://user-images.githubusercontent.com/114749413/232517079-bf865d5c-7838-4950-a79d-e5943630ebde.png)
 
 ### /Mountains
 - *Description*: This endpoint will show the user 9 Mountains images from the Unsplash API together with a title/short description.
 - *Modules*: Navbar (SearchButton), Body (ImagesDisplay, ImageRow, UnsplashAPI), Footer
+![Image snap Mountains](https://user-images.githubusercontent.com/114749413/232517109-7df844cf-7b81-4cc8-8fae-0d0c20fab587.png)
 
 ## Modules
 ---
 The architecture of the modules in this application are the following:
-
+![Image snap Modules](https://user-images.githubusercontent.com/114749413/232517130-521cc996-0788-455a-a64a-f4361f567038.png)
 ### NavBar
 - *Description*: This module returns the HTML for a bootstrap navbar. The Props make sure that it is able to return a navbar for any application with as many pages possible.
 - *Props*: 
