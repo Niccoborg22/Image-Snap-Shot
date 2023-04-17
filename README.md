@@ -1,5 +1,5 @@
 # Image-Snap-Shot
-## Description
+## Overview
 ---
 This React web application aims at inspiring artistic people to find the image they most like about their favourite topics. I decided to develop this application to train in working with APIs, Javascript, React and learn the syntax and bases of TypeScript.
 
