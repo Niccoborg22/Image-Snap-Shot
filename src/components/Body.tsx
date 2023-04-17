@@ -1,5 +1,5 @@
 import "../App.css";
-import FirstPage from "./componentsBody/componentsBody/firstPageOptions";
+import FirstPage from "./componentsBody/componentsBody/firstPage";
 import ImageDisplay from "./componentsBody/componentsBody/imageDisplay";
 
 // Inputs needed for the navigation bar

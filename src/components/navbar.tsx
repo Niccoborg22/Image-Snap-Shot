@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import SearchBar from "./componentsNavBar/searchBar";
+import SearchBar from "./componentsNavBar/SearchButton";
 import "../App.css";
 
 

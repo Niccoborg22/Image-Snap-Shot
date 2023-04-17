@@ -4,7 +4,7 @@ const requestOptions = {
 };
 
 // Key to access the unsplash API
-const unsplash_KEY = "xxx";
+const unsplash_KEY = "";
 
 // Base URL to request data from the unsplash API
 const base_URL = "https://api.unsplash.com/search/photos";
