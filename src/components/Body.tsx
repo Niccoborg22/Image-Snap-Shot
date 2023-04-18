@@ -56,7 +56,7 @@ async function Body({
     <>
       <div
         className="container text-center bg-dark text-light py-5"
-        style={{ height: "100vh", width: "100%" }}
+        style={{ minHeight: "100vh", width: "100%" }}
       >
         <h1 className="MainTitle">{appTitle}</h1>
         <h5 className="mt-3">{appDescription}</h5>
